@@ -6,6 +6,7 @@ from rest_framework.relations import SlugRelatedField
 
 User = get_user_model()
 
+
 class PostSerializer(serializers.ModelSerializer):
     author = SlugRelatedField(slug_field='username', read_only=True)
 
